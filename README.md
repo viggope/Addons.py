@@ -21,6 +21,10 @@
   
   
   You can use the color() function instead of typing the color as a whole line.
-
+  
+  This is recommended to do
+  
+    fc = functions.fc
+    fm = functions.fm
 
 ![5d69e29f0d71aaa04ed9725100199b4e](https://user-images.githubusercontent.com/59804534/123821406-a74a7e00-d8fb-11eb-9e73-3ad8d85d1ead.png)
