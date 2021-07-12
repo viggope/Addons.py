@@ -2,10 +2,8 @@ import time
 import random
 
 
-
-#time.sleep
-#from typing import Type
-
+# time.sleep
+# from typing import Type
 
 
 class functions:
@@ -40,7 +38,7 @@ class functions:
             if _number_ >= _from_:
                 functions.math.round_up(_from_)
 
-        def repeat(self, _range_, _text_, _ending_=None, _separation_=None):        # Not done
+        def repeat(self, _range_, _text_, _ending_=None, _separation_=None):  # Not done
             try:
                 for i in range(_range_):
                     print(_text_, end=_ending_, sep=_separation_)
@@ -58,16 +56,12 @@ class functions:
                             print(_text_)
             print('')
 
-
-
-
         def calculate(self, _calculation_):
             return eval(str(_calculation_))
 
     class colors:
 
-
-        def black(self):    # doesn't work?
+        def black(self):  # doesn't work?
             print(str("\033[0;30;1m"))
 
         def red(self):
@@ -90,7 +84,6 @@ class functions:
 
         def white(self):
             print("\033[0;37;1m")
-
 
         def black_text(self, _text_):
             print("\033[0;30;1m" + _text_)
@@ -116,7 +109,6 @@ class functions:
         def white_text(self, _text_):
             print("\033[0;37;1m" + _text_)
 
-
         def black_input(self, _text_):
             input("\033[0;30;1m" + _text_)
 
@@ -140,8 +132,6 @@ class functions:
 
         def white_input(self, _text_):
             input("\033[0;37;1m" + _text_)
-
-
 
         def color(self, color):
             if color == 'black':
@@ -219,15 +209,14 @@ class functions:
                 input("\033[0;37;1m" + _text_)
 
     class extra:
-        def summon(self,):
-
+        def summon(self, ):
             pass
 
         def reverse(self, word):  # Syntax: text = reverse('')
             result = ''
             count = 1
             for i in range(len(word)):
-                result = result + word[len(word)-count]
+                result = result + word[len(word) - count]
                 count += 1
             return result
 
@@ -272,8 +261,6 @@ class functions:
         def output(self, text='', text2='', text3=''):
             print(str(text) + str(text2) + str(text3))
 
-
-
     class encrypting:
         def encrypt(self, digit_amount, free_generate=False):  # Syntax: var = encrypt(4)  # Output:
             value = None
@@ -285,6 +272,13 @@ class functions:
                 value = random.randint(0, (digit_amount))
 
             return value
+
+        def keep(self, object, if_bool=bool):  # Syntax cheat: keep(<class 'bool'>) # Enough to assert True
+            if type(if_bool) == bool:
+                if object == if_bool:
+                    assert True
+                else:
+                    assert False
 
     class _advanced_:
 
@@ -351,60 +345,62 @@ class functions:
         def get_None(self):
             return None
 
-        def get_type(self, object):
-            if object == int:
-                return int
+        def get_type(self, object, allow_text_type=True, allow_numeric_types=True, allow_sequence_types=True,
+                     allow_mapping_type=True, allow_set_types=True, allow_bolean_types=True, allow_binary_types=True, allow_none_type=True):
 
-            if object == str:
+            if allow_text_type == True and type(object) == str:
                 return str
 
-            if object == float: #float, complex
+            if allow_numeric_types == True and type(object) == int:
+                return int
+
+            if allow_numeric_types == True and type(object) == float:
                 return float
 
-            if object == complex:
+            if allow_numeric_types == True and type(object) == complex:
                 return complex
 
-            if object == list:
+            if allow_sequence_types == True and type(object) == list:
                 return list
 
-            if object == tuple:
+            if allow_sequence_types == True and type(object) == tuple:
                 return tuple
 
-            if object == range:
+            if allow_sequence_types == True and type(object) == range:
                 return range
 
-            if object == dict:
+            if allow_mapping_type == True and type(object) == dict:
                 return dict
 
-            if object == bytes:
+            if allow_binary_types == True and type(object) == bytes:
                 return bytes
 
-            if object == bytearray:
+            if allow_binary_types == True and type(object) == bytearray:
                 return bytearray
 
-            if object == memoryview:
+            if allow_binary_types == True and type(object) == memoryview:
                 return memoryview
 
-            if object == bool:
+            if allow_bolean_types == True and type(object) == bool:
                 return bool
 
-            if object == set:
+            if allow_set_types == True and type(object) == set:
                 return set
 
-            if object == frozenset:
+            if allow_set_types == True and type(object) == frozenset:
                 return frozenset
 
-            if object == None:
+            if allow_none_type == True and type(object) == None:
                 return None
 
-            elif object == True:
+            elif allow_bolean_types == True and type(object) == True:
                 return True
 
-            elif object == False:
+            elif allow_bolean_types == True and type(object) == False:
                 return False
 
             else:
-                return int('∞')
+                return 0
 
         def get_info(self, object):
             try:
@@ -426,18 +422,17 @@ class functions:
             return info_list
 
         def example(self, example, background):  # Syntax: var = example('Lorem impsum', var):
-            substitute = background    #Purpose - Principle
+            substitute = background  # Purpose - Principle
             background = example
             fs.send(example)  # Free -example- value
             return substitute
-
 
     class slicing:
         def check_slice(self, slice_name, list):
             step = 0
             list_item = 0
             slice_name = str(slice_name)
-            for i in range(len(list)-1):
+            for i in range(len(list) - 1):
                 if list[list_item][step] == slice_name[step]:
                     print('found')
                     step += 1
@@ -448,7 +443,6 @@ class functions:
                 return list_item
             else:
                 return None
-
 
     class remote:
         remote_id = 'ri_1'
@@ -464,8 +458,6 @@ class functions:
 
         def connecting_process(self, process_name, id=int):
             fAy.run_process(self, process_name, id=id)
-
-
 
     class ability:
         ability_id = 'ai_1'
@@ -496,7 +488,6 @@ class functions:
                     fs.run(code=code[item[process]], self=self)
             else:
                 pass
-
 
     class bool():
         def negative(self, variable=None):  # Syntax: var = negative()  # Or: negative(var)
@@ -529,6 +520,3 @@ f_re = functions.remote
 _fa = functions._advanced_
 code = [(fAy.default), (f_re.default)]
 item = ['ai_1', 're_1']
-
-
-
