@@ -1,0 +1,534 @@
+import time
+import random
+
+
+
+#time.sleep
+#from typing import Type
+
+
+
+class functions:
+    class math:
+
+        def round_up(self, _number_):
+
+            try:
+
+                _number_str = str(_number_)
+                last = len(_number_str) - 1
+                last_int = int(_number_str[last])
+                if '.' in _number_str:
+                    if last_int < 5:
+                        left_to_rounded = last_int
+                        return int(int(round(_number_)) + left_to_rounded)
+                    else:
+                        return round(_number_)
+                else:
+                    return _number_
+
+            except:
+                print("\033[0;31;1m")
+                print('Error: Missing argument _number_')
+
+            # Max decimal len of 15
+            # Max whole number + (1 to infinity decimals) of 19
+            # ≈11111111.1111111111 is also a problem
+            # 1111111111.111111111 to
+
+        def round(self, _number_, _from_, _scale_):
+            if _number_ >= _from_:
+                functions.math.round_up(_from_)
+
+        def repeat(self, _range_, _text_, _ending_=None, _separation_=None):        # Not done
+            try:
+                for i in range(_range_):
+                    print(_text_, end=_ending_, sep=_separation_)
+
+            except:
+                try:
+                    for i in range(_range_):
+                        print(_text_, end=_ending_)
+                except:
+                    try:
+                        for i in range(_range_):
+                            print(_text_, sep=_separation_)
+                    except:
+                        for i in range(_range_):
+                            print(_text_)
+            print('')
+
+
+
+
+        def calculate(self, _calculation_):
+            return eval(str(_calculation_))
+
+    class colors:
+
+
+        def black(self):    # doesn't work?
+            print(str("\033[0;30;1m"))
+
+        def red(self):
+            print("\033[0;31;1m")
+
+        def green(self):
+            print("\033[0;32;1m")
+
+        def yellow(self):
+            print("\033[0;33;1m")
+
+        def blue(self):
+            print("\033[0;34;1m")
+
+        def purple(self):
+            print("\033[0;35;1m")
+
+        def cyan(self):
+            print("\033[0;36;1m")
+
+        def white(self):
+            print("\033[0;37;1m")
+
+
+        def black_text(self, _text_):
+            print("\033[0;30;1m" + _text_)
+
+        def red_text(self, _text_):
+            print("\033[0;31;1m" + _text_)
+
+        def green_text(self, _text_):
+            print("\033[0;32;1m" + _text_)
+
+        def yellow_text(self, _text_):
+            print("\033[0;33;1m" + _text_)
+
+        def blue_text(self, _text_):
+            print("\033[0;34;1m" + _text_)
+
+        def purple_text(self, _text_):
+            print("\033[0;35;1m" + _text_)
+
+        def cyan_text(self, _text_):
+            print("\033[0;36;1m" + _text_)
+
+        def white_text(self, _text_):
+            print("\033[0;37;1m" + _text_)
+
+
+        def black_input(self, _text_):
+            input("\033[0;30;1m" + _text_)
+
+        def red_input(self, _text_):
+            input("\033[0;31;1m" + _text_)
+
+        def green_input(self, _text_):
+            input("\033[0;32;1m" + _text_)
+
+        def yellow_input(self, _text_):
+            input("\033[0;33;1m" + _text_)
+
+        def blue_input(self, _text_):
+            input("\033[0;34;1m" + _text_)
+
+        def purple_input(self, _text_):
+            input("\033[0;35;1m" + _text_)
+
+        def cyan_input(self, _text_):
+            input("\033[0;36;1m" + _text_)
+
+        def white_input(self, _text_):
+            input("\033[0;37;1m" + _text_)
+
+
+
+        def color(self, color):
+            if color == 'black':
+                print("\033[0;30;1m")
+
+            if color == 'red':
+                print("\033[0;31;1m")
+
+            if color == 'green':
+                print("\033[0;32;1m")
+
+            if color == 'yellow':
+                print("\033[0;33;1m")
+
+            if color == 'blue':
+                print("\033[0;34;1m")
+
+            if color == 'purple':
+                print("\033[0;35;1m")
+
+            if color == 'cyan':
+                print("\033[0;36;1m")
+
+            if color == 'white':
+                print("\033[0;37;1m")
+
+        def color_text(self, color, _text_):
+            if color == 'black':
+                print("\033[0;30;1m" + _text_)
+
+            if color == 'red':
+                print("\033[0;31;1m" + _text_)
+
+            if color == 'green':
+                print("\033[0;32;1m" + _text_)
+
+            if color == 'yellow':
+                print("\033[0;33;1m" + _text_)
+
+            if color == 'blue':
+                print("\033[0;34;1m" + _text_)
+
+            if color == 'purple':
+                print("\033[0;35;1m" + _text_)
+
+            if color == 'cyan':
+                print("\033[0;36;1m" + _text_)
+
+            if color == 'white':
+                print("\033[0;37;1m" + _text_)
+
+        def color_input(self, color, _text_):
+            if color == 'black':
+                input("\033[0;30;1m" + _text_)
+
+            if color == 'red':
+                input("\033[0;31;1m" + _text_)
+
+            if color == 'green':
+                input("\033[0;32;1m" + _text_)
+
+            if color == 'yellow':
+                input("\033[0;33;1m" + _text_)
+
+            if color == 'blue':
+                input("\033[0;34;1m" + _text_)
+
+            if color == 'purple':
+                input("\033[0;35;1m" + _text_)
+
+            if color == 'cyan':
+                input("\033[0;36;1m" + _text_)
+
+            if color == 'white':
+                input("\033[0;37;1m" + _text_)
+
+    class extra:
+        def summon(self,):
+
+            pass
+
+        def reverse(self, word):  # Syntax: text = reverse('')
+            result = ''
+            count = 1
+            for i in range(len(word)):
+                result = result + word[len(word)-count]
+                count += 1
+            return result
+
+    class statements:
+        def skip(self):
+            pass
+
+        def send(self, content):
+            return content
+            pass
+
+        def password(self, password, checker):
+            if checker == password:
+                return True
+            else:
+                return False
+            pass
+
+        def pass_thrue(self, password):
+            if password == True:
+                return True
+            else:
+                return False
+            pass
+
+        def run(self, code):
+            exec(code)
+
+        def console(self):
+            do = input('>>>')
+            exec(do)
+
+    class texting:
+        def scream(self, word):
+            word = word.upper()
+            return word
+
+        def whisper(self, word):
+            word = word.lower()
+            return word
+
+        def output(self, text='', text2='', text3=''):
+            print(str(text) + str(text2) + str(text3))
+
+
+
+    class encrypting:
+        def encrypt(self, digit_amount, free_generate=False):  # Syntax: var = encrypt(4)  # Output:
+            value = None
+            additional_number = 0
+            for i in range(digit_amount):
+                additional_number += 1
+
+            if free_generate == True:
+                value = random.randint(0, (digit_amount))
+
+            return value
+
+    class _advanced_:
+
+        def set_value(self, value, variable=vars()):  # Syntax: var = set_value(value)
+            variable = value
+            return value
+
+        def detect(self, objective):
+            pass
+
+        def fish(self, net, hook, line, fish):
+            pass
+
+        def store(self, objective, storage=list()):
+            storage.insert(0, objective)
+            pass
+
+        def install(self):
+            pass
+
+        def __1__(self, one=1):
+            return 1
+
+        def sync(self, objective_A, objective_B):
+            value = None
+            if objective_A < objective_B:
+                value = objective_A + ((objective_B - objective_A) / 2)
+
+            if objective_B < objective_A:
+                value = objective_B + ((objective_A - objective_B) / 2)
+
+            return value
+
+        def get(self, x=1, from_y=1):
+            value = None
+            if x == int and from_y == int:
+                value: int = from_y - (from_y - x)
+
+            if x == slice and from_y == list:
+                value: list = from_y[from_y[x]]
+
+            return value
+
+        def active(self, process):  # Syntax: var = active(var)
+            pass
+
+        def passive(self, process):  # Syntax: var = passive(var)
+            process = False
+            return process
+            pass
+
+        def reactive(self, process, target):  # Syntax: var = reactive(var, target)
+            reacting_to = bool
+            if reacting_to == target:
+                process = True
+            else:
+                process = False
+            return process
+
+        def get_output(self, text='', text2='', text3=''):
+            general_text = (str(text) + str(text2) + str(text3))
+            return general_text
+
+        def get_None(self):
+            return None
+
+        def get_type(self, object):
+            if object == int:
+                return int
+
+            if object == str:
+                return str
+
+            if object == float: #float, complex
+                return float
+
+            if object == complex:
+                return complex
+
+            if object == list:
+                return list
+
+            if object == tuple:
+                return tuple
+
+            if object == range:
+                return range
+
+            if object == dict:
+                return dict
+
+            if object == bytes:
+                return bytes
+
+            if object == bytearray:
+                return bytearray
+
+            if object == memoryview:
+                return memoryview
+
+            if object == bool:
+                return bool
+
+            if object == set:
+                return set
+
+            if object == frozenset:
+                return frozenset
+
+            if object == None:
+                return None
+
+            elif object == True:
+                return True
+
+            elif object == False:
+                return False
+
+            else:
+                return int('∞')
+
+        def get_info(self, object):
+            try:
+                lenght = len(object)
+            except:
+                pass
+
+            try:
+                name = str(object)
+            except:
+                pass
+
+            try:
+                type = _fa.get_type(object)
+            except:
+                pass
+
+            info_list = [name, lenght, type]
+            return info_list
+
+        def example(self, example, background):  # Syntax: var = example('Lorem impsum', var):
+            substitute = background    #Purpose - Principle
+            background = example
+            fs.send(example)  # Free -example- value
+            return substitute
+
+
+    class slicing:
+        def check_slice(self, slice_name, list):
+            step = 0
+            list_item = 0
+            slice_name = str(slice_name)
+            for i in range(len(list)-1):
+                if list[list_item][step] == slice_name[step]:
+                    print('found')
+                    step += 1
+
+                else:
+                    list_item += 1
+            if list[list_item] == slice_name:
+                return list_item
+            else:
+                return None
+
+
+    class remote:
+        remote_id = 'ri_1'
+        ri_1 = id(remote_id)
+        connect_value = 'run_ability'
+        connecting = False
+
+        def default(self):
+            pass
+
+        def connect(self, target, id=int):
+            fs.run(code=f_re.connecting_process(self, target, id=id), self=fs)
+
+        def connecting_process(self, process_name, id=int):
+            fAy.run_process(self, process_name, id=id)
+
+
+
+    class ability:
+        ability_id = 'ai_1'
+        ai_1 = id(ability_id)
+
+        def default(self):
+            pass
+
+        def _run_(self, code, with_id, remote_acces=None):
+            fs.run(code=code)
+            if with_id == 'ai_1':
+                return fs.run(code)
+            else:
+                fs.run(fAy._id_(with_id))
+
+            var = remote_acces.id
+
+        def _id_(self, id):
+            return id
+
+        def _hex_code_(self, hex_code):
+            if hex_code == False:
+                fAy._run_(hex_code)
+
+        def run_process(self, process, id=int):
+            if process == 'ai_1':
+                if id == 'ai_1':
+                    fs.run(code=code[item[process]], self=self)
+            else:
+                pass
+
+
+    class bool():
+        def negative(self, variable=None):  # Syntax: var = negative()  # Or: negative(var)
+            false = False
+            if variable == None:
+                return False
+            else:
+                variable = False
+                return variable
+
+        def positive(self, variable=None):  # Syntax: var = negative()  # Or: negative(var)
+
+            if variable == None:
+                return True
+            else:
+                variable = True
+                return variable
+
+
+
+fm = functions.math()
+fc = functions.colors()
+fe = functions.extra
+fs = functions.statements
+fAy = functions.ability
+ft = functions.texting
+fb = functions.bool
+f_en = functions.encrypting
+f_re = functions.remote
+_fa = functions._advanced_
+code = [(fAy.default), (f_re.default)]
+item = ['ai_1', 're_1']
+
+
+
