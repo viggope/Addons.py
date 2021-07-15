@@ -10,14 +10,23 @@
 
 
 #### Other information
-  Use a shortcut to your imported code so you don't need to type the long class names (You don't need to type it)
+  We uses a shortcut so you don't need to type the long class names (You don't need to type this)
 
     fm = functions.math()
     fc = functions.colors()
+    fe = functions.extra()
+    fs = functions.statements()
+    fAy = functions.ability()
+    ft = functions.texting()
+    fb = functions.bool()
+    f_en = functions.encrypting()
+    f_re = functions.remote()
+    _fa = functions._advanced_()
+    f_sl = functions.slicing()
 
   To use this feature, type your code like this:
   
-    functions.fc.green_text('Hello!')
+    functions.fc.green_text('Hello green world!')
   
   
   You can use the color() function instead of typing the color as a whole line.
@@ -26,5 +35,41 @@
   
     fc = functions.fc
     fm = functions.fm
+_______________________________________________________________________________________________________________________________
+  
+#### Commands and functions
+  
+  This cool function from the class "_math_" sets the variable to a specific value if the variable is more than another value:
+  
+    fm.set_after(_a_, _b_, _c_):
+  
+  The __syntax__ for the current function:
+  
+    var = set_after(var, 10, 0)
+  __Use:__
+    
+    testvalue = 0
+    while True:
+        testvalue += 1
+        testvalue = fm.set_after(testvalue, 10, 0)
+        print(testvalue)
+        time.sleep(0.5)
+  
+  
+  Another function but from the class "_extra_":
+  
+    reverse(word):
+  
+  __Syntax:__
+  
+    print(fe.reverse('Was it a car or a cat I saw?'))
+  __Use:__
+    
+    twentyone = fe.reverse(12)
+    dollars = dollars + twentyone
+  
+  
+  
+_______________________________________________________________________________________________________________________________
 
 ![5d69e29f0d71aaa04ed9725100199b4e](https://user-images.githubusercontent.com/59804534/123821406-a74a7e00-d8fb-11eb-9e73-3ad8d85d1ead.png)
