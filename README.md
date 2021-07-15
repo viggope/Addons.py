@@ -65,11 +65,14 @@ ________________________________________________________________________________
     print(ft.reverse('Was it a car or a cat I saw?'))
   __Use:__
     
-    twentyone = fe.reverse(12)
-    dollars = dollars + twentyone
+    value = input("Enter a palindrome >")
+    if value == ft.reverse(value):
+        print("You won!")
+    else:
+        print("Oops, that's not same word reversed")
   
   
-  
+ 
 _______________________________________________________________________________________________________________________________
 
 ![5d69e29f0d71aaa04ed9725100199b4e](https://user-images.githubusercontent.com/59804534/123821406-a74a7e00-d8fb-11eb-9e73-3ad8d85d1ead.png)
