@@ -56,13 +56,13 @@ ________________________________________________________________________________
         time.sleep(0.5)
   
   
-  Another function but from the class "_extra_":
+  Another function but from the class "_texting_":
   
     reverse(word):
   
   __Syntax:__
   
-    print(fe.reverse('Was it a car or a cat I saw?'))
+    print(ft.reverse('Was it a car or a cat I saw?'))
   __Use:__
     
     twentyone = fe.reverse(12)
